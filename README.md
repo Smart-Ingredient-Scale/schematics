@@ -1,22 +1,31 @@
 # **ECE 477: Smart Kitchen Scale Schematics**
 
-![EAGLE PCB Design Tool](png/eagle.jpg)
+![EAGLE PCB Design Tool](img/eagle.jpg)
 
-**Last Updated**: Jan 19, 2022
+**Last Updated**: Feb 1, 2022
 
-## **Repository Structure**
+<h2 style="color: salmon" > <b> Repository Structure </b> </h2>
+
 ```
-├── datasheets      # Relevant IC datasheets + pinouts
-├── eagle-brd       # PCB Board files in .brd format
-├── eagle-sch       # PCB Schematic files in .sch format
-└── README.md
+├── datasheets      # Directory for datasheets
+├── eagle.epf       # EAGLE file for library config
+├── img             # Images folder for documentation
+├── pcb             # Directory of schematics and board design files
+└── README.md       
 
-3 directories, 1 file
+3 directories, 2 files
 ```
 
-## **Responsibilities**
-- [ ] Design `Load Cell` submodule
-- [ ] Design `SPI Touchscreen` submodule
-- [ ] Design `Battery Recharging` submodule
-- [ ] Design `Seven Segment Display` submodule
+<h2 style="color: salmon" > <b> Schematic Design Responsibilities </b> </h2>
+
+- [ ] Design `Load Cell` subcircuit
+- [ ] Design `SPI Touchscreen` subcircuit
+- [x] Design `Battery Recharging` subcircuit
+- [ ] Design `Seven Segment Display` subcircuit
+- [ ] Design `MCU Debugger` subcircuit
+- [ ] Integrate all submodules (MCU, battery, plugs, buttons, etc.)
 - [x] Act like a `putz`
+
+<h2 style="color: salmon" > <b> Board Design Responsibilities </b> </h2>
+
+- [ ] Design PCB Revision 1.0.
