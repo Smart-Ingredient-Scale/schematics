@@ -2,7 +2,7 @@
 
 ![EAGLE PCB Design Tool](img/eagle.jpg)
 
-**Last Updated**: Feb 1, 2022
+**Last Updated**: Feb 16, 2022
 
 <h2 style="color: salmon" > <b> Repository Structure </b> </h2>
 
@@ -19,12 +19,12 @@
 <h2 style="color: salmon" > <b> Schematic Design Responsibilities </b> </h2>
 
 - [ ] Design `Load Cell` subcircuit
-- [ ] Design `SPI Touchscreen` subcircuit
+- [ ] Design `SPI Touchscreen` headers + &mu;C connections
 - [x] Design `Battery Recharging` subcircuit
-- [ ] Design `Seven Segment Display` subcircuit
+- [ ] Design `Seven Segment Display` wire SPI pins + VDD/GND
 - [ ] Design `MCU Debugger` subcircuit
 - [ ] Integrate all submodules (MCU, battery, plugs, buttons, etc.)
-- [x] Act like a `putz`
+- [x] Be a potato
 
 <h2 style="color: salmon" > <b> Board Design Responsibilities </b> </h2>
 
