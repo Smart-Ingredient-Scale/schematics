@@ -10966,6 +10966,8 @@ VDD Connector</text>
 <text x="302.26" y="124.46" size="1.778" layer="95">TFT SPI Debug</text>
 <text x="119.38" y="49.022" size="1.778" layer="95">Scope Headers</text>
 <text x="134.62" y="149.86" size="1.778" layer="95">NOTE: Add signals to silkscreen</text>
+<text x="17.78" y="284.48" size="1.778" layer="95">TODO: Add 10-20 ohm resistors to
+MCU GPIO header pins</text>
 <wire x1="462.28" y1="215.9" x2="490.22" y2="215.9" width="0.1524" layer="95" style="shortdash"/>
 <wire x1="490.22" y1="215.9" x2="490.22" y2="203.2" width="0.1524" layer="95" style="shortdash"/>
 <wire x1="490.22" y1="203.2" x2="462.28" y2="203.2" width="0.1524" layer="95" style="shortdash"/>
@@ -11048,9 +11050,6 @@ Connector</text>
 <text x="111.76" y="249.682" size="1.778" layer="95">Decoupling Capacitors</text>
 <text x="58.42" y="157.48" size="1.778" layer="95">BOOT0: FRM pg. 57</text>
 <text x="5.08" y="121.92" size="1.778" layer="95">See STM oscillator application note</text>
-<text x="7.62" y="292.1" size="1.778" layer="95">TODO: Add 1.5 ohm resistor in series
-with power supply.</text>
-<text x="7.62" y="284.48" size="1.778" layer="95">TODO: Discuss 5V connector mount</text>
 </plain>
 <instances>
 <instance part="IC1" gate="G$1" x="53.34" y="101.6" smashed="yes">

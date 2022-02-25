@@ -10817,7 +10817,7 @@ Source: 008-0260-0_E.pdf</description>
 <part name="SUPPLY26" library="LinnesLab-Symbols" deviceset="3.3V" device=""/>
 <part name="J10" library="LinnesLab-Connectors" deviceset="CONN_05" device=""/>
 <part name="J11" library="LinnesLab-Connectors" deviceset="CONN_04" device=""/>
-<part name="U$1" library="LinnesLab-Connectors" deviceset="PAD" device="" value="TP1"/>
+<part name="U$1" library="LinnesLab-Connectors" deviceset="PAD" device=""/>
 <part name="C19" library="LinnesLab-Passives" deviceset="CAPACITOR" device="0603" package3d_urn="urn:adsk.eagle:package:15661989/2" value="0.1uF"/>
 <part name="R7" library="LinnesLab-Passives" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:15661944/2" value="100"/>
 <part name="R8" library="LinnesLab-Passives" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:15661944/2" value="100"/>
@@ -10962,10 +10962,12 @@ and SDA lines (they're open drain).</text>
 <text x="142.24" y="35.56" size="1.778" layer="95">Scope Probe
 VDD Connector</text>
 <text x="299.72" y="157.48" size="1.778" layer="95">ADC Debug</text>
-<text x="294.64" y="137.16" size="1.778" layer="95">Backlight Pad</text>
+<text x="302.26" y="137.16" size="1.778" layer="95">Backlight Debug</text>
 <text x="302.26" y="124.46" size="1.778" layer="95">TFT SPI Debug</text>
 <text x="119.38" y="49.022" size="1.778" layer="95">Scope Headers</text>
 <text x="134.62" y="149.86" size="1.778" layer="95">NOTE: Add signals to silkscreen</text>
+<text x="17.78" y="284.48" size="1.778" layer="95">TODO: Add 10-20 ohm resistors to
+MCU GPIO header pins</text>
 <wire x1="462.28" y1="215.9" x2="490.22" y2="215.9" width="0.1524" layer="95" style="shortdash"/>
 <wire x1="490.22" y1="215.9" x2="490.22" y2="203.2" width="0.1524" layer="95" style="shortdash"/>
 <wire x1="490.22" y1="203.2" x2="462.28" y2="203.2" width="0.1524" layer="95" style="shortdash"/>
@@ -11047,10 +11049,6 @@ Connector</text>
 <wire x1="152.4" y1="223.52" x2="109.22" y2="223.52" width="0.1524" layer="95" style="shortdash"/>
 <text x="111.76" y="249.682" size="1.778" layer="95">Decoupling Capacitors</text>
 <text x="58.42" y="157.48" size="1.778" layer="95">BOOT0: FRM pg. 57</text>
-<text x="5.08" y="121.92" size="1.778" layer="95">See STM oscillator application note</text>
-<text x="7.62" y="292.1" size="1.778" layer="95">TODO: Add 1.5 ohm resistor in series
-with power supply.</text>
-<text x="7.62" y="284.48" size="1.778" layer="95">TODO: Discuss 5V connector mount</text>
 </plain>
 <instances>
 <instance part="IC1" gate="G$1" x="53.34" y="101.6" smashed="yes">

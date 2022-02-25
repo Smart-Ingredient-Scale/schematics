@@ -3146,6 +3146,11 @@ naming: grid - package width</description>
 <sheets>
 <sheet>
 <plain>
+<text x="-45.72" y="139.7" size="1.778" layer="91">Replace this connector with the proper battery
+terminal termination connector. Might require
+online purchase.
+
+CONFIRM ON BOARD!!</text>
 <text x="91.44" y="58.42" size="1.778" layer="95">Charging
 LED (yellow)</text>
 <text x="10.16" y="55.88" size="1.778" layer="95">Charged
