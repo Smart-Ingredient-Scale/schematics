@@ -10969,8 +10969,8 @@ GND Connector</text>
 <text x="329.184" y="79.248" size="1.778" layer="95">HX711 PCB (Needs Scoring)</text>
 <text x="190.5" y="162.56" size="1.778" layer="95">D7-D0 unused</text>
 <text x="182.626" y="176.022" size="1.778" layer="95">TFT LCD 2.8" Adafruit RT Touchscreen</text>
-<text x="254" y="223.52" size="1.778" layer="95">TODO: Add EEPROM Circuit Here!</text>
-<text x="254" y="215.9" size="1.778" layer="95">Don't forget pull-up resistors on the I2C SCL
+<text x="264.16" y="200.66" size="1.778" layer="95">TODO: Add EEPROM Circuit Here!</text>
+<text x="264.16" y="187.96" size="1.778" layer="95">Don't forget pull-up resistors on the I2C SCL
 and SDA lines (they're open drain).</text>
 <text x="4.826" y="33.528" size="1.778" layer="95">MCU to MAX7219</text>
 <text x="142.24" y="35.56" size="1.778" layer="95">Scope Probe
@@ -11062,9 +11062,6 @@ Connector</text>
 <text x="111.76" y="249.682" size="1.778" layer="95">Decoupling Capacitors</text>
 <text x="58.42" y="157.48" size="1.778" layer="95">BOOT0: FRM pg. 57</text>
 <text x="5.08" y="121.92" size="1.778" layer="95">See STM oscillator application note</text>
-<text x="7.62" y="292.1" size="1.778" layer="95">TODO: Add 1.5 ohm resistor in series
-with power supply.</text>
-<text x="7.62" y="284.48" size="1.778" layer="95">TODO: Discuss 5V connector mount</text>
 <wire x1="177.8" y1="215.9" x2="251.46" y2="215.9" width="0.1524" layer="95" style="shortdash"/>
 <wire x1="251.46" y1="215.9" x2="251.46" y2="180.34" width="0.1524" layer="95" style="shortdash"/>
 <wire x1="251.46" y1="180.34" x2="177.8" y2="180.34" width="0.1524" layer="95" style="shortdash"/>
