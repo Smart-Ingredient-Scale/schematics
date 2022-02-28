@@ -10706,6 +10706,81 @@ Source: 008-0260-0_E.pdf</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="I2C-EEPROM">
+<packages>
+<package name="SOIC8" urn="urn:adsk.eagle:footprint:8083898/1">
+<description>&lt;b&gt;Small Outline IC&lt;/b&gt;</description>
+<wire x1="2.4" y1="1.9" x2="2.4" y2="-1.4" width="0.2032" layer="51"/>
+<wire x1="2.4" y1="-1.4" x2="2.4" y2="-1.9" width="0.2032" layer="51"/>
+<wire x1="2.4" y1="-1.9" x2="-2.4" y2="-1.9" width="0.2032" layer="51"/>
+<wire x1="-2.4" y1="-1.9" x2="-2.4" y2="-1.4" width="0.2032" layer="51"/>
+<wire x1="-2.4" y1="-1.4" x2="-2.4" y2="1.9" width="0.2032" layer="51"/>
+<wire x1="-2.4" y1="1.9" x2="2.4" y2="1.9" width="0.2032" layer="51"/>
+<wire x1="2.4" y1="-1.4" x2="-2.4" y2="-1.4" width="0.2032" layer="51"/>
+<smd name="2" x="-0.635" y="-2.6" dx="0.6" dy="2.2" layer="1"/>
+<smd name="7" x="-0.635" y="2.6" dx="0.6" dy="2.2" layer="1"/>
+<smd name="1" x="-1.905" y="-2.6" dx="0.6" dy="2.2" layer="1"/>
+<smd name="3" x="0.635" y="-2.6" dx="0.6" dy="2.2" layer="1"/>
+<smd name="4" x="1.905" y="-2.6" dx="0.6" dy="2.2" layer="1"/>
+<smd name="8" x="-1.905" y="2.6" dx="0.6" dy="2.2" layer="1"/>
+<smd name="6" x="0.635" y="2.6" dx="0.6" dy="2.2" layer="1"/>
+<smd name="5" x="1.905" y="2.6" dx="0.6" dy="2.2" layer="1"/>
+<text x="-2.667" y="-1.905" size="1.27" layer="25" rot="R90">&gt;NAME</text>
+<text x="3.937" y="-1.905" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
+<rectangle x1="-2.15" y1="-3.1" x2="-1.66" y2="-2" layer="51"/>
+<rectangle x1="-0.88" y1="-3.1" x2="-0.39" y2="-2" layer="51"/>
+<rectangle x1="0.39" y1="-3.1" x2="0.88" y2="-2" layer="51"/>
+<rectangle x1="1.66" y1="-3.1" x2="2.15" y2="-2" layer="51"/>
+<rectangle x1="1.66" y1="2" x2="2.15" y2="3.1" layer="51"/>
+<rectangle x1="0.39" y1="2" x2="0.88" y2="3.1" layer="51"/>
+<rectangle x1="-0.88" y1="2" x2="-0.39" y2="3.1" layer="51"/>
+<rectangle x1="-2.15" y1="2" x2="-1.66" y2="3.1" layer="51"/>
+</package>
+</packages>
+<symbols>
+<symbol name="I2CEEPROM">
+<pin name="A0" x="-35.56" y="10.16" length="middle"/>
+<pin name="A1" x="-35.56" y="7.62" length="middle"/>
+<pin name="A2" x="-35.56" y="5.08" length="middle"/>
+<pin name="GND" x="-35.56" y="2.54" length="middle" direction="pwr"/>
+<wire x1="-30.48" y1="12.7" x2="-30.48" y2="0" width="0.254" layer="94"/>
+<wire x1="-30.48" y1="0" x2="-12.7" y2="0" width="0.254" layer="94"/>
+<wire x1="-12.7" y1="0" x2="-12.7" y2="12.7" width="0.254" layer="94"/>
+<wire x1="-12.7" y1="12.7" x2="-30.48" y2="12.7" width="0.254" layer="94"/>
+<pin name="VCC" x="-7.62" y="10.16" length="middle" direction="pwr" rot="R180"/>
+<pin name="WP" x="-7.62" y="7.62" length="middle" rot="R180"/>
+<pin name="SCL" x="-7.62" y="5.08" length="middle" rot="R180"/>
+<pin name="SDA" x="-7.62" y="2.54" length="middle" rot="R180"/>
+<text x="-30.48" y="15.24" size="2.1844" layer="95">&gt;NAME</text>
+<text x="-30.48" y="-5.08" size="2.1844" layer="96">&gt;VALUE</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="BR24S64FJ-WE2" prefix="U">
+<description>64Kbit size EEPROM using the I2C protocol for communication</description>
+<gates>
+<gate name="G$1" symbol="I2CEEPROM" x="76.2" y="7.62"/>
+</gates>
+<devices>
+<device name="" package="SOIC8">
+<connects>
+<connect gate="G$1" pin="A0" pad="1"/>
+<connect gate="G$1" pin="A1" pad="2"/>
+<connect gate="G$1" pin="A2" pad="3"/>
+<connect gate="G$1" pin="GND" pad="4"/>
+<connect gate="G$1" pin="SCL" pad="6"/>
+<connect gate="G$1" pin="SDA" pad="5"/>
+<connect gate="G$1" pin="VCC" pad="8"/>
+<connect gate="G$1" pin="WP" pad="7"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -10914,6 +10989,14 @@ Source: 008-0260-0_E.pdf</description>
 <part name="R35" library="LinnesLab-Passives" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:15661944/2" value="1.5"/>
 <part name="SUPPLY33" library="LinnesLab-Symbols" deviceset="3.3V" device=""/>
 <part name="SUPPLY36" library="LinnesLab-Symbols" deviceset="3.3V" device=""/>
+<part name="U2" library="I2C-EEPROM" deviceset="BR24S64FJ-WE2" device=""/>
+<part name="GND53" library="LinnesLab-Symbols" deviceset="GND" device=""/>
+<part name="SUPPLY37" library="LinnesLab-Symbols" deviceset="3.3V" device=""/>
+<part name="GND54" library="LinnesLab-Symbols" deviceset="GND" device=""/>
+<part name="SUPPLY38" library="LinnesLab-Symbols" deviceset="3.3V" device=""/>
+<part name="R36" library="LinnesLab-Passives" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:15661944/2" value="1k"/>
+<part name="R37" library="LinnesLab-Passives" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:15661944/2" value="1k"/>
+<part name="SUPPLY39" library="LinnesLab-Symbols" deviceset="3.3V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -10969,9 +11052,6 @@ GND Connector</text>
 <text x="329.184" y="79.248" size="1.778" layer="95">HX711 PCB (Needs Scoring)</text>
 <text x="190.5" y="162.56" size="1.778" layer="95">D7-D0 unused</text>
 <text x="182.626" y="176.022" size="1.778" layer="95">TFT LCD 2.8" Adafruit RT Touchscreen</text>
-<text x="264.16" y="200.66" size="1.778" layer="95">TODO: Add EEPROM Circuit Here!</text>
-<text x="264.16" y="187.96" size="1.778" layer="95">Don't forget pull-up resistors on the I2C SCL
-and SDA lines (they're open drain).</text>
 <text x="4.826" y="33.528" size="1.778" layer="95">MCU to MAX7219</text>
 <text x="142.24" y="35.56" size="1.778" layer="95">Scope Probe
 VDD Connector</text>
@@ -11069,6 +11149,11 @@ Connector</text>
 <text x="218.44" y="190.5" size="1.778" layer="95">HX711: TP2</text>
 <text x="238.76" y="203.2" size="1.778" layer="95">3V3 TP0</text>
 <text x="231.14" y="213.36" size="1.778" layer="95">VDDA TP1</text>
+<wire x1="256.54" y1="215.9" x2="332.74" y2="215.9" width="0.1524" layer="95" style="shortdash"/>
+<wire x1="332.74" y1="215.9" x2="332.74" y2="180.34" width="0.1524" layer="95" style="shortdash"/>
+<wire x1="332.74" y1="180.34" x2="256.54" y2="180.34" width="0.1524" layer="95" style="shortdash"/>
+<wire x1="256.54" y1="180.34" x2="256.54" y2="215.9" width="0.1524" layer="95" style="shortdash"/>
+<text x="264.16" y="218.44" size="1.778" layer="95">I2C BR24S64J-WE2 EEPROM</text>
 </plain>
 <instances>
 <instance part="IC1" gate="G$1" x="53.34" y="101.6" smashed="yes">
@@ -11750,6 +11835,33 @@ Connector</text>
 <instance part="SUPPLY36" gate="G$1" x="236.22" y="198.12" smashed="yes">
 <attribute name="VALUE" x="236.22" y="200.914" size="1.778" layer="96" align="bottom-center"/>
 </instance>
+<instance part="U2" gate="G$1" x="299.72" y="195.58" smashed="yes">
+<attribute name="NAME" x="269.24" y="210.82" size="2.1844" layer="95"/>
+<attribute name="VALUE" x="269.24" y="190.5" size="2.1844" layer="96"/>
+</instance>
+<instance part="GND53" gate="G$1" x="261.62" y="190.5" smashed="yes">
+<attribute name="VALUE" x="261.62" y="190.246" size="1.778" layer="96" align="top-center"/>
+</instance>
+<instance part="SUPPLY37" gate="G$1" x="294.64" y="208.28" smashed="yes">
+<attribute name="VALUE" x="294.64" y="211.074" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="GND54" gate="G$1" x="302.26" y="200.66" smashed="yes">
+<attribute name="VALUE" x="302.26" y="200.406" size="1.778" layer="96" align="top-center"/>
+</instance>
+<instance part="SUPPLY38" gate="G$1" x="309.88" y="208.28" smashed="yes">
+<attribute name="VALUE" x="309.88" y="211.074" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="R36" gate="G$1" x="309.88" y="200.66" smashed="yes" rot="R270">
+<attribute name="NAME" x="314.706" y="197.104" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="312.42" y="201.676" size="1.778" layer="96"/>
+</instance>
+<instance part="R37" gate="G$1" x="322.58" y="198.12" smashed="yes" rot="R270">
+<attribute name="NAME" x="327.406" y="194.564" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="325.12" y="199.136" size="1.778" layer="96"/>
+</instance>
+<instance part="SUPPLY39" gate="G$1" x="322.58" y="208.28" smashed="yes">
+<attribute name="VALUE" x="322.58" y="211.074" size="1.778" layer="96" align="bottom-center"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -12117,6 +12229,26 @@ Connector</text>
 <wire x1="193.04" y1="73.66" x2="195.58" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="195.58" y1="73.66" x2="195.58" y2="68.58" width="0.1524" layer="91"/>
 <pinref part="GND52" gate="G$1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="GND53" gate="G$1" pin="GND"/>
+<wire x1="261.62" y1="198.12" x2="261.62" y2="193.04" width="0.1524" layer="91"/>
+<pinref part="U2" gate="G$1" pin="GND"/>
+<wire x1="264.16" y1="198.12" x2="261.62" y2="198.12" width="0.1524" layer="91"/>
+<pinref part="U2" gate="G$1" pin="A2"/>
+<wire x1="261.62" y1="198.12" x2="261.62" y2="200.66" width="0.1524" layer="91"/>
+<wire x1="261.62" y1="200.66" x2="264.16" y2="200.66" width="0.1524" layer="91"/>
+<pinref part="U2" gate="G$1" pin="A1"/>
+<wire x1="264.16" y1="203.2" x2="261.62" y2="203.2" width="0.1524" layer="91"/>
+<wire x1="261.62" y1="203.2" x2="261.62" y2="200.66" width="0.1524" layer="91"/>
+<pinref part="U2" gate="G$1" pin="A0"/>
+<wire x1="261.62" y1="203.2" x2="261.62" y2="205.74" width="0.1524" layer="91"/>
+<wire x1="261.62" y1="205.74" x2="264.16" y2="205.74" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GND54" gate="G$1" pin="GND"/>
+<pinref part="U2" gate="G$1" pin="WP"/>
+<wire x1="302.26" y1="203.2" x2="292.1" y2="203.2" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -12528,12 +12660,31 @@ Connector</text>
 <wire x1="76.2" y1="119.38" x2="76.2" y2="124.46" width="0.1524" layer="91"/>
 <label x="76.2" y="124.46" size="1.778" layer="95" rot="R90" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U2" gate="G$1" pin="SCL"/>
+<wire x1="292.1" y1="200.66" x2="299.72" y2="200.66" width="0.1524" layer="91"/>
+<pinref part="R36" gate="G$1" pin="2"/>
+<wire x1="299.72" y1="200.66" x2="299.72" y2="195.58" width="0.1524" layer="91"/>
+<wire x1="299.72" y1="195.58" x2="309.88" y2="195.58" width="0.1524" layer="91"/>
+<wire x1="309.88" y1="195.58" x2="317.5" y2="195.58" width="0.1524" layer="91"/>
+<label x="317.5" y="195.58" size="1.778" layer="95" rot="R90" xref="yes"/>
+</segment>
 </net>
 <net name="MEM_SDA" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="PB7"/>
 <wire x1="73.66" y1="119.38" x2="73.66" y2="142.24" width="0.1524" layer="91"/>
 <label x="73.66" y="142.24" size="1.778" layer="95" rot="R90" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U2" gate="G$1" pin="SDA"/>
+<wire x1="292.1" y1="198.12" x2="294.64" y2="198.12" width="0.1524" layer="91"/>
+<wire x1="294.64" y1="198.12" x2="294.64" y2="190.5" width="0.1524" layer="91"/>
+<wire x1="294.64" y1="190.5" x2="322.58" y2="190.5" width="0.1524" layer="91"/>
+<pinref part="R37" gate="G$1" pin="2"/>
+<wire x1="322.58" y1="190.5" x2="322.58" y2="193.04" width="0.1524" layer="91"/>
+<wire x1="322.58" y1="190.5" x2="330.2" y2="190.5" width="0.1524" layer="91"/>
+<label x="330.2" y="190.5" size="1.778" layer="95" rot="R90" xref="yes"/>
 </segment>
 </net>
 <net name="PC3" class="0">
@@ -12889,6 +13040,22 @@ Connector</text>
 <pinref part="SUPPLY36" gate="G$1" pin="3.3V"/>
 <wire x1="231.14" y1="195.58" x2="236.22" y2="195.58" width="0.1524" layer="91"/>
 <wire x1="236.22" y1="195.58" x2="236.22" y2="198.12" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U2" gate="G$1" pin="VCC"/>
+<pinref part="SUPPLY37" gate="G$1" pin="3.3V"/>
+<wire x1="292.1" y1="205.74" x2="294.64" y2="205.74" width="0.1524" layer="91"/>
+<wire x1="294.64" y1="205.74" x2="294.64" y2="208.28" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="SUPPLY38" gate="G$1" pin="3.3V"/>
+<wire x1="309.88" y1="205.74" x2="309.88" y2="208.28" width="0.1524" layer="91"/>
+<pinref part="R36" gate="G$1" pin="1"/>
+</segment>
+<segment>
+<pinref part="SUPPLY39" gate="G$1" pin="3.3V"/>
+<pinref part="R37" gate="G$1" pin="1"/>
+<wire x1="322.58" y1="208.28" x2="322.58" y2="203.2" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="HX_SDA" class="0">
