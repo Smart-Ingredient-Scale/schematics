@@ -4393,6 +4393,81 @@ Two pin, compact surface mount connector. Commonly used as a battery input conne
 </deviceset>
 </devicesets>
 </library>
+<library name="I2C-EEPROM">
+<packages>
+<package name="SOIC8" urn="urn:adsk.eagle:footprint:8083898/1">
+<description>&lt;b&gt;Small Outline IC&lt;/b&gt;</description>
+<wire x1="2.4" y1="1.9" x2="2.4" y2="-1.4" width="0.2032" layer="51"/>
+<wire x1="2.4" y1="-1.4" x2="2.4" y2="-1.9" width="0.2032" layer="51"/>
+<wire x1="2.4" y1="-1.9" x2="-2.4" y2="-1.9" width="0.2032" layer="51"/>
+<wire x1="-2.4" y1="-1.9" x2="-2.4" y2="-1.4" width="0.2032" layer="51"/>
+<wire x1="-2.4" y1="-1.4" x2="-2.4" y2="1.9" width="0.2032" layer="51"/>
+<wire x1="-2.4" y1="1.9" x2="2.4" y2="1.9" width="0.2032" layer="51"/>
+<wire x1="2.4" y1="-1.4" x2="-2.4" y2="-1.4" width="0.2032" layer="51"/>
+<smd name="2" x="-0.635" y="-2.6" dx="0.6" dy="2.2" layer="1"/>
+<smd name="7" x="-0.635" y="2.6" dx="0.6" dy="2.2" layer="1"/>
+<smd name="1" x="-1.905" y="-2.6" dx="0.6" dy="2.2" layer="1"/>
+<smd name="3" x="0.635" y="-2.6" dx="0.6" dy="2.2" layer="1"/>
+<smd name="4" x="1.905" y="-2.6" dx="0.6" dy="2.2" layer="1"/>
+<smd name="8" x="-1.905" y="2.6" dx="0.6" dy="2.2" layer="1"/>
+<smd name="6" x="0.635" y="2.6" dx="0.6" dy="2.2" layer="1"/>
+<smd name="5" x="1.905" y="2.6" dx="0.6" dy="2.2" layer="1"/>
+<text x="-2.667" y="-1.905" size="1.27" layer="25" rot="R90">&gt;NAME</text>
+<text x="3.937" y="-1.905" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
+<rectangle x1="-2.15" y1="-3.1" x2="-1.66" y2="-2" layer="51"/>
+<rectangle x1="-0.88" y1="-3.1" x2="-0.39" y2="-2" layer="51"/>
+<rectangle x1="0.39" y1="-3.1" x2="0.88" y2="-2" layer="51"/>
+<rectangle x1="1.66" y1="-3.1" x2="2.15" y2="-2" layer="51"/>
+<rectangle x1="1.66" y1="2" x2="2.15" y2="3.1" layer="51"/>
+<rectangle x1="0.39" y1="2" x2="0.88" y2="3.1" layer="51"/>
+<rectangle x1="-0.88" y1="2" x2="-0.39" y2="3.1" layer="51"/>
+<rectangle x1="-2.15" y1="2" x2="-1.66" y2="3.1" layer="51"/>
+</package>
+</packages>
+<symbols>
+<symbol name="I2CEEPROM">
+<pin name="A0" x="-35.56" y="10.16" length="middle"/>
+<pin name="A1" x="-35.56" y="7.62" length="middle"/>
+<pin name="A2" x="-35.56" y="5.08" length="middle"/>
+<pin name="GND" x="-35.56" y="2.54" length="middle" direction="pwr"/>
+<wire x1="-30.48" y1="12.7" x2="-30.48" y2="0" width="0.254" layer="94"/>
+<wire x1="-30.48" y1="0" x2="-12.7" y2="0" width="0.254" layer="94"/>
+<wire x1="-12.7" y1="0" x2="-12.7" y2="12.7" width="0.254" layer="94"/>
+<wire x1="-12.7" y1="12.7" x2="-30.48" y2="12.7" width="0.254" layer="94"/>
+<pin name="VCC" x="-7.62" y="10.16" length="middle" direction="pwr" rot="R180"/>
+<pin name="WP" x="-7.62" y="7.62" length="middle" rot="R180"/>
+<pin name="SCL" x="-7.62" y="5.08" length="middle" rot="R180"/>
+<pin name="SDA" x="-7.62" y="2.54" length="middle" rot="R180"/>
+<text x="-30.48" y="15.24" size="2.1844" layer="95">&gt;NAME</text>
+<text x="-30.48" y="-5.08" size="2.1844" layer="96">&gt;VALUE</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="BR24S64FJ-WE2" prefix="U">
+<description>64Kbit size EEPROM using the I2C protocol for communication</description>
+<gates>
+<gate name="G$1" symbol="I2CEEPROM" x="76.2" y="7.62"/>
+</gates>
+<devices>
+<device name="" package="SOIC8">
+<connects>
+<connect gate="G$1" pin="A0" pad="1"/>
+<connect gate="G$1" pin="A1" pad="2"/>
+<connect gate="G$1" pin="A2" pad="3"/>
+<connect gate="G$1" pin="GND" pad="4"/>
+<connect gate="G$1" pin="SCL" pad="6"/>
+<connect gate="G$1" pin="SDA" pad="5"/>
+<connect gate="G$1" pin="VCC" pad="8"/>
+<connect gate="G$1" pin="WP" pad="7"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -4419,6 +4494,7 @@ Two pin, compact surface mount connector. Commonly used as a battery input conne
 <part name="J1" library="LinnesLab-Connectors" deviceset="CONN_02" device=""/>
 <part name="J2" library="LinnesLab-Connectors" deviceset="CONN_04" device=""/>
 <part name="S1" library="SamacSys_Parts" deviceset="EG1270" device=""/>
+<part name="U2" library="I2C-EEPROM" deviceset="BR24S64FJ-WE2" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -4487,6 +4563,10 @@ Two pin, compact surface mount connector. Commonly used as a battery input conne
 <instance part="S1" gate="G$1" x="180.34" y="-20.32" smashed="yes">
 <attribute name="NAME" x="199.39" y="-12.7" size="1.778" layer="95" align="center-left"/>
 <attribute name="VALUE" x="199.39" y="-15.24" size="1.778" layer="96" align="center-left"/>
+</instance>
+<instance part="U2" gate="G$1" x="76.2" y="25.4" smashed="yes">
+<attribute name="NAME" x="45.72" y="40.64" size="2.1844" layer="95"/>
+<attribute name="VALUE" x="45.72" y="20.32" size="2.1844" layer="96"/>
 </instance>
 </instances>
 <busses>

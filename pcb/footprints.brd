@@ -3,10 +3,10 @@
 <eagle version="9.6.2">
 <drawing>
 <settings>
-<setting alwaysvectorfont="yes"/>
+<setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="10" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="1" altunitdist="mil" altunit="mil"/>
+<grid distance="1" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="1" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -217,6 +217,9 @@
 <text x="28.9814" y="35.6108" size="1.016" layer="25">FE20-1</text>
 <dimension x1="24.4856" y1="21.8948" x2="27.0256" y2="21.8948" x3="25.7556" y3="18.5674" textsize="1.016" layer="20" unit="mil" visible="yes"/>
 <dimension x1="37.6682" y1="21.8694" x2="40.2082" y2="21.8694" x3="38.9382" y3="17.1196" textsize="1.016" layer="20" unit="mil" visible="yes"/>
+<dimension x1="65.1256" y1="21.5138" x2="65.1256" y2="20.9042" x3="63.9064" y3="21.209" textsize="0.8128" layer="20" unit="mil" visible="yes"/>
+<dimension x1="65.1256" y1="21.5138" x2="72.517" y2="21.4884" x3="68.832109375" y3="24.64725625" textsize="0.8128" layer="20" unit="mil" visible="yes"/>
+<dimension x1="72.5424" y1="21.5138" x2="72.5424" y2="17.0942" x3="75.7936" y3="19.304" textsize="0.8128" layer="20" unit="mil" visible="yes"/>
 </plain>
 <libraries>
 <library name="SamacSys_Parts">
@@ -1187,6 +1190,38 @@ W = angled&lt;p&gt;
 </package>
 </packages>
 </library>
+<library name="I2C-EEPROM">
+<packages>
+<package name="SOIC8" urn="urn:adsk.eagle:footprint:8083898/1">
+<description>&lt;b&gt;Small Outline IC&lt;/b&gt;</description>
+<wire x1="2.4" y1="1.9" x2="2.4" y2="-1.4" width="0.2032" layer="51"/>
+<wire x1="2.4" y1="-1.4" x2="2.4" y2="-1.9" width="0.2032" layer="51"/>
+<wire x1="2.4" y1="-1.9" x2="-2.4" y2="-1.9" width="0.2032" layer="51"/>
+<wire x1="-2.4" y1="-1.9" x2="-2.4" y2="-1.4" width="0.2032" layer="51"/>
+<wire x1="-2.4" y1="-1.4" x2="-2.4" y2="1.9" width="0.2032" layer="51"/>
+<wire x1="-2.4" y1="1.9" x2="2.4" y2="1.9" width="0.2032" layer="51"/>
+<wire x1="2.4" y1="-1.4" x2="-2.4" y2="-1.4" width="0.2032" layer="51"/>
+<smd name="2" x="-0.635" y="-2.6" dx="0.6" dy="2.2" layer="1"/>
+<smd name="7" x="-0.635" y="2.6" dx="0.6" dy="2.2" layer="1"/>
+<smd name="1" x="-1.905" y="-2.6" dx="0.6" dy="2.2" layer="1"/>
+<smd name="3" x="0.635" y="-2.6" dx="0.6" dy="2.2" layer="1"/>
+<smd name="4" x="1.905" y="-2.6" dx="0.6" dy="2.2" layer="1"/>
+<smd name="8" x="-1.905" y="2.6" dx="0.6" dy="2.2" layer="1"/>
+<smd name="6" x="0.635" y="2.6" dx="0.6" dy="2.2" layer="1"/>
+<smd name="5" x="1.905" y="2.6" dx="0.6" dy="2.2" layer="1"/>
+<text x="-2.667" y="-1.905" size="1.27" layer="25" rot="R90">&gt;NAME</text>
+<text x="3.937" y="-1.905" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
+<rectangle x1="-2.15" y1="-3.1" x2="-1.66" y2="-2" layer="51"/>
+<rectangle x1="-0.88" y1="-3.1" x2="-0.39" y2="-2" layer="51"/>
+<rectangle x1="0.39" y1="-3.1" x2="0.88" y2="-2" layer="51"/>
+<rectangle x1="1.66" y1="-3.1" x2="2.15" y2="-2" layer="51"/>
+<rectangle x1="1.66" y1="2" x2="2.15" y2="3.1" layer="51"/>
+<rectangle x1="0.39" y1="2" x2="0.88" y2="3.1" layer="51"/>
+<rectangle x1="-0.88" y1="2" x2="-0.39" y2="3.1" layer="51"/>
+<rectangle x1="-2.15" y1="2" x2="-1.66" y2="3.1" layer="51"/>
+</package>
+</packages>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -1513,6 +1548,10 @@ design rules under a new name.</description>
 <attribute name="NAME" x="-4.1614" y="10.4248" size="1.27" layer="25" align="center"/>
 <attribute name="VALUE" x="1.198" y="12.8632" size="1.27" layer="27" align="center"/>
 </element>
+<element name="U2" library="I2C-EEPROM" package="SOIC8" value="BR24S64FJ-WE2" x="68.834" y="19.304" smashed="yes" rot="R270">
+<attribute name="NAME" x="66.929" y="21.971" size="1.27" layer="25"/>
+<attribute name="VALUE" x="60.0964" y="14.097" size="1.27" layer="27" rot="R358.8"/>
+</element>
 </elements>
 <signals>
 <signal name="VIN">
@@ -1523,6 +1562,12 @@ design rules under a new name.</description>
 </signal>
 <signal name="VSS">
 <contactref element="U1" pad="2"/>
+</signal>
+<signal name="GND">
+<contactref element="U2" pad="4"/>
+</signal>
+<signal name="VCC">
+<contactref element="U2" pad="8"/>
 </signal>
 </signals>
 <mfgpreviewcolors>
