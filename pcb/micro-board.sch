@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.01" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -11001,6 +11001,8 @@ Source: 008-0260-0_E.pdf</description>
 <part name="R38" library="LinnesLab-Passives" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:15661944/2" value="10k"/>
 <part name="R39" library="LinnesLab-Passives" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:15661944/2" value="10k"/>
 <part name="SUPPLY40" library="LinnesLab-Symbols" deviceset="3.3V" device=""/>
+<part name="C33" library="LinnesLab-Passives" deviceset="CAPACITOR" device="0603" package3d_urn="urn:adsk.eagle:package:15661989/2" value="0.1uF"/>
+<part name="C34" library="LinnesLab-Passives" deviceset="CAPACITOR" device="0603" package3d_urn="urn:adsk.eagle:package:15661989/2" value="10uF"/>
 </parts>
 <sheets>
 <sheet>
@@ -11077,10 +11079,10 @@ VDD Connector</text>
 <wire x1="414.02" y1="71.12" x2="414.02" y2="7.62" width="0.1524" layer="95" style="shortdash"/>
 <wire x1="363.22" y1="71.12" x2="363.22" y2="7.62" width="0.1524" layer="95" style="shortdash"/>
 <wire x1="363.22" y1="7.62" x2="414.02" y2="7.62" width="0.1524" layer="95" style="shortdash"/>
-<wire x1="332.74" y1="71.12" x2="358.14" y2="71.12" width="0.1524" layer="95" style="shortdash"/>
+<wire x1="330.2" y1="71.12" x2="358.14" y2="71.12" width="0.1524" layer="95" style="shortdash"/>
 <wire x1="358.14" y1="71.12" x2="358.14" y2="38.1" width="0.1524" layer="95" style="shortdash"/>
-<wire x1="358.14" y1="38.1" x2="332.74" y2="38.1" width="0.1524" layer="95" style="shortdash"/>
-<wire x1="332.74" y1="38.1" x2="332.74" y2="71.12" width="0.1524" layer="95" style="shortdash"/>
+<wire x1="358.14" y1="38.1" x2="330.2" y2="38.1" width="0.1524" layer="95" style="shortdash"/>
+<wire x1="330.2" y1="38.1" x2="330.2" y2="71.12" width="0.1524" layer="95" style="shortdash"/>
 <wire x1="327.66" y1="78.74" x2="327.66" y2="0" width="0.1524" layer="95" style="shortdash"/>
 <wire x1="327.66" y1="0" x2="553.72" y2="0" width="0.1524" layer="95" style="shortdash"/>
 <wire x1="553.72" y1="0" x2="553.72" y2="78.74" width="0.1524" layer="95" style="shortdash"/>
@@ -11337,12 +11339,12 @@ Connector</text>
 <attribute name="VALUE" x="344.17" y="66.294" size="1.778" layer="96" align="bottom-center"/>
 </instance>
 <instance part="C15" gate="G$1" x="339.09" y="53.34" smashed="yes">
-<attribute name="NAME" x="340.614" y="56.261" size="1.778" layer="95"/>
-<attribute name="VALUE" x="340.614" y="51.181" size="1.778" layer="96"/>
+<attribute name="NAME" x="339.852" y="56.261" size="1.778" layer="95"/>
+<attribute name="VALUE" x="339.852" y="51.181" size="1.778" layer="96"/>
 </instance>
 <instance part="C16" gate="G$1" x="349.25" y="53.34" smashed="yes">
-<attribute name="NAME" x="350.774" y="56.261" size="1.778" layer="95"/>
-<attribute name="VALUE" x="350.774" y="51.181" size="1.778" layer="96"/>
+<attribute name="NAME" x="344.424" y="56.261" size="1.778" layer="95"/>
+<attribute name="VALUE" x="343.408" y="48.895" size="1.778" layer="96"/>
 </instance>
 <instance part="GND18" gate="G$1" x="344.17" y="45.72" smashed="yes">
 <attribute name="VALUE" x="344.17" y="45.466" size="1.778" layer="96" align="top-center"/>
@@ -11881,6 +11883,14 @@ Connector</text>
 <instance part="SUPPLY40" gate="G$1" x="246.38" y="152.4" smashed="yes">
 <attribute name="VALUE" x="246.38" y="155.194" size="1.778" layer="96" align="bottom-center"/>
 </instance>
+<instance part="C33" gate="G$1" x="334.01" y="53.34" smashed="yes">
+<attribute name="NAME" x="332.994" y="58.801" size="1.778" layer="95"/>
+<attribute name="VALUE" x="332.994" y="46.101" size="1.778" layer="96"/>
+</instance>
+<instance part="C34" gate="G$1" x="354.076" y="53.34" smashed="yes">
+<attribute name="NAME" x="351.536" y="61.341" size="1.778" layer="95"/>
+<attribute name="VALUE" x="351.536" y="46.101" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -12009,6 +12019,12 @@ Connector</text>
 <wire x1="349.25" y1="50.8" x2="349.25" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="349.25" y1="48.26" x2="344.17" y2="48.26" width="0.1524" layer="91"/>
 <junction x="344.17" y="48.26"/>
+<pinref part="C33" gate="G$1" pin="2"/>
+<wire x1="334.01" y1="50.8" x2="334.01" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="334.01" y1="48.26" x2="339.09" y2="48.26" width="0.1524" layer="91"/>
+<pinref part="C34" gate="G$1" pin="2"/>
+<wire x1="354.076" y1="50.8" x2="354.076" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="354.076" y1="48.26" x2="349.25" y2="48.26" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND19" gate="G$1" pin="GND"/>
@@ -12917,6 +12933,12 @@ Connector</text>
 <pinref part="SUPPLY12" gate="G$1" pin="3.3V"/>
 <wire x1="344.17" y1="60.96" x2="344.17" y2="63.5" width="0.1524" layer="91"/>
 <junction x="344.17" y="60.96"/>
+<pinref part="C33" gate="G$1" pin="1"/>
+<wire x1="334.01" y1="60.96" x2="334.01" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="334.01" y1="60.96" x2="339.09" y2="60.96" width="0.1524" layer="91"/>
+<pinref part="C34" gate="G$1" pin="1"/>
+<wire x1="354.076" y1="58.42" x2="354.076" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="354.076" y1="60.96" x2="349.25" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="SUPPLY14" gate="G$1" pin="3.3V"/>
