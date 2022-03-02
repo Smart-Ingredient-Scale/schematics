@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="1" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="1" altunitdist="mil" altunit="mil"/>
+<grid distance="10" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="1" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -212,14 +212,15 @@
 <dimension x1="66.7004" y1="42.6974" x2="66.7004" y2="45.2374" x3="70.104" y3="43.9674" textsize="1.016" layer="20" unit="mil" visible="yes"/>
 <dimension x1="58.7502" y1="40.1574" x2="66.7004" y2="40.1574" x3="62.7253" y3="36.4236" textsize="1.016" layer="20" unit="mil" visible="yes"/>
 <dimension x1="61.3664" y1="67.3354" x2="66.1924" y2="67.3354" x3="63.7794" y3="59.4868" textsize="1.016" layer="20" unit="mil" visible="yes"/>
-<dimension x1="9.4488" y1="20.6502" x2="9.4488" y2="18.668996875" x3="9.4488" y3="10.868996875" textsize="1.016" layer="20" dtype="radius" unit="mil" visible="yes"/>
-<text x="9.2202" y="22.0472" size="1.016" layer="25">PRT-11641</text>
 <text x="28.9814" y="35.6108" size="1.016" layer="25">FE20-1</text>
 <dimension x1="24.4856" y1="21.8948" x2="27.0256" y2="21.8948" x3="25.7556" y3="18.5674" textsize="1.016" layer="20" unit="mil" visible="yes"/>
 <dimension x1="37.6682" y1="21.8694" x2="40.2082" y2="21.8694" x3="38.9382" y3="17.1196" textsize="1.016" layer="20" unit="mil" visible="yes"/>
 <dimension x1="65.1256" y1="21.5138" x2="65.1256" y2="20.9042" x3="63.9064" y3="21.209" textsize="0.8128" layer="20" unit="mil" visible="yes"/>
-<dimension x1="65.1256" y1="21.5138" x2="72.517" y2="21.4884" x3="68.832109375" y3="24.64725625" textsize="0.8128" layer="20" unit="mil" visible="yes"/>
+<dimension x1="65.1256" y1="21.5138" x2="72.517" y2="21.4884" x3="68.831234375" y3="24.3923875" textsize="0.8128" layer="20" unit="mil" visible="yes"/>
 <dimension x1="72.5424" y1="21.5138" x2="72.5424" y2="17.0942" x3="75.7936" y3="19.304" textsize="0.8128" layer="20" unit="mil" visible="yes"/>
+<dimension x1="9.906" y1="18.034" x2="12.446" y2="18.034" x3="11.176" y3="13.716" textsize="1.778" layer="20" unit="mil" visible="yes"/>
+<dimension x1="9.906" y1="18.034" x2="9.906" y2="19.558" x3="3.302" y3="18.796" textsize="1.778" layer="20" unit="mil" visible="yes"/>
+<dimension x1="31.75" y1="3.048" x2="29.21" y2="3.048" x3="30.48" y3="7.874" textsize="1.778" layer="20" unit="mil" visible="yes"/>
 </plain>
 <libraries>
 <library name="SamacSys_Parts">
@@ -452,6 +453,29 @@
 <wire x1="-2.6" y1="-1.75" x2="-2.6" y2="6.75" width="0.1" layer="21"/>
 <wire x1="-2.6" y1="6.75" x2="0.9" y2="6.75" width="0.1" layer="21"/>
 <wire x1="0.9" y1="6.75" x2="0.9" y2="6" width="0.1" layer="21"/>
+</package>
+<package name="MJE13001TP">
+<description>&lt;b&gt;TO-92_2020-1&lt;/b&gt;&lt;br&gt;
+</description>
+<pad name="1" x="0" y="0" drill="1.09" diameter="1.6"/>
+<pad name="2" x="1.27" y="1.5" drill="1.09" diameter="1.6"/>
+<pad name="3" x="2.54" y="0" drill="1.09" diameter="1.6"/>
+<text x="1.27" y="0.709" size="1.27" layer="25" align="center">&gt;NAME</text>
+<text x="1.27" y="0.709" size="1.27" layer="27" align="center">&gt;VALUE</text>
+<wire x1="-2.039" y1="3.519" x2="4.579" y2="3.519" width="0.1" layer="51"/>
+<wire x1="4.579" y1="3.519" x2="4.579" y2="-2.1" width="0.1" layer="51"/>
+<wire x1="4.579" y1="-2.1" x2="-2.039" y2="-2.1" width="0.1" layer="51"/>
+<wire x1="-2.039" y1="-2.1" x2="-2.039" y2="3.519" width="0.1" layer="51"/>
+<wire x1="-1.03" y1="0" x2="-0.93" y2="-1.1" width="0.2" layer="51"/>
+<wire x1="-0.93" y1="-1.1" x2="3.47" y2="-1.1" width="0.2" layer="51"/>
+<wire x1="3.47" y1="-1.1" x2="3.57" y2="0" width="0.2" layer="51"/>
+<wire x1="3.57" y1="0" x2="3.57" y2="0" width="0.2" layer="51"/>
+<wire x1="3.57" y1="0" x2="-1.03" y2="0" width="0.2" layer="51" curve="190.4"/>
+<wire x1="-0.93" y1="-1.1" x2="3.47" y2="-1.1" width="0.1" layer="21"/>
+<wire x1="3.47" y1="-1.1" x2="3.57" y2="0" width="0.1" layer="21"/>
+<wire x1="3.57" y1="0" x2="3.57" y2="0" width="0.1" layer="21"/>
+<wire x1="3.57" y1="0" x2="-1.03" y2="0" width="0.1" layer="21" curve="190.4"/>
+<wire x1="-1.03" y1="0" x2="-0.93" y2="-1.1" width="0.1" layer="21"/>
 </package>
 </packages>
 </library>
@@ -1083,35 +1107,6 @@ W = angled&lt;p&gt;
 </library>
 <library name="LinnesLab-Connectors">
 <packages>
-<package name="JST-2-SMD">
-<description>&lt;h3&gt;JST-Right Angle Male Header SMT&lt;/h3&gt;
-&lt;p&gt;Specifications:
-&lt;ul&gt;&lt;li&gt;Pin count: 2&lt;/li&gt;
-&lt;li&gt;Pin pitch: 2mm&lt;/li&gt;
-&lt;/ul&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=”http://www.4uconnector.com/online/object/4udrawing/20404.pdf”&gt;Datasheet referenced for footprint&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Example device(s):
-&lt;ul&gt;&lt;li&gt;CONN_02&lt;/li&gt;
-&lt;li&gt;JST_2MM_MALE&lt;/li&gt;
-&lt;/ul&gt;&lt;/p&gt;</description>
-<wire x1="-4" y1="-1" x2="-4" y2="-4.5" width="0.2032" layer="21"/>
-<wire x1="-4" y1="-4.5" x2="-3.2" y2="-4.5" width="0.2032" layer="21"/>
-<wire x1="-3.2" y1="-4.5" x2="-3.2" y2="-2" width="0.2032" layer="21"/>
-<wire x1="-3.2" y1="-2" x2="-2" y2="-2" width="0.2032" layer="21"/>
-<wire x1="2" y1="-2" x2="3.2" y2="-2" width="0.2032" layer="21"/>
-<wire x1="3.2" y1="-2" x2="3.2" y2="-4.5" width="0.2032" layer="21"/>
-<wire x1="3.2" y1="-4.5" x2="4" y2="-4.5" width="0.2032" layer="21"/>
-<wire x1="4" y1="-4.5" x2="4" y2="-1" width="0.2032" layer="21"/>
-<wire x1="2" y1="3" x2="-2" y2="3" width="0.2032" layer="21"/>
-<smd name="1" x="-1" y="-3.7" dx="1" dy="4.6" layer="1"/>
-<smd name="2" x="1" y="-3.7" dx="1" dy="4.6" layer="1"/>
-<smd name="NC1" x="-3.4" y="1.5" dx="3.4" dy="1.6" layer="1" rot="R90"/>
-<smd name="NC2" x="3.4" y="1.5" dx="3.4" dy="1.6" layer="1" rot="R90"/>
-<text x="-1.397" y="1.778" size="0.6096" layer="25" ratio="20">&gt;NAME</text>
-<text x="-1.651" y="0.635" size="0.6096" layer="27" ratio="20">&gt;VALUE</text>
-<wire x1="-4.191" y1="3.429" x2="4.191" y2="3.429" width="0.127" layer="108"/>
-<text x="-4.064" y="3.683" size="0.381" layer="108">Place this line against board edge</text>
-</package>
 <package name="1X02">
 <description>&lt;h3&gt;Plated Through Hole&lt;/h3&gt;
 &lt;p&gt;Specifications:
@@ -1521,12 +1516,6 @@ design rules under a new name.</description>
 <attribute name="NAME" x="62.738" y="52.578" size="1.27" layer="25" align="center"/>
 <attribute name="VALUE" x="62.738" y="50.8" size="1.27" layer="27" align="center"/>
 </element>
-<element name="LIPO1" library="LinnesLab-Connectors" package="JST-2-SMD" value="" x="3.4544" y="19.6342" smashed="yes" rot="R90">
-<attribute name="NAME" x="1.6764" y="18.2372" size="0.6096" layer="25" ratio="20" rot="R90"/>
-<attribute name="PROD_ID" value="CONN-11443" x="3.4544" y="19.6342" size="1.016" layer="27" rot="R90" display="off"/>
-<attribute name="SF_ID" value="PRT-08612" x="3.4544" y="19.6342" size="1.016" layer="27" rot="R90" display="off"/>
-<attribute name="VALUE" x="2.8194" y="17.9832" size="0.6096" layer="27" ratio="20" rot="R90"/>
-</element>
 <element name="J1" library="LinnesLab-Connectors" package="1X02" value="" x="37.6682" y="21.8694" smashed="yes">
 <attribute name="NAME" x="36.3982" y="23.2664" size="0.6096" layer="25" font="vector" ratio="20"/>
 <attribute name="VALUE" x="36.3982" y="19.8374" size="0.6096" layer="27" font="vector" ratio="20"/>
@@ -1536,21 +1525,33 @@ design rules under a new name.</description>
 <attribute name="PROD_ID" value="CONN-09696" x="24.4856" y="21.8948" size="1.016" layer="27" display="off"/>
 <attribute name="VALUE" x="23.2156" y="19.8628" size="0.6096" layer="27" font="vector" ratio="20"/>
 </element>
-<element name="S1" library="SamacSys_Parts" package="EG1270" value="EG1270" x="2.7178" y="4.572" smashed="yes">
-<attribute name="ARROW_PART_NUMBER" value="" x="2.7178" y="4.572" size="1.016" layer="27" display="off"/>
-<attribute name="ARROW_PRICE-STOCK" value="" x="2.7178" y="4.572" size="1.016" layer="27" display="off"/>
-<attribute name="DESCRIPTION" value="E-SWITCH - EG1270 - SWITCH, SLIDE, SPDT, 300mA, 6V, PCB" x="2.7178" y="4.572" size="1.016" layer="27" display="off"/>
-<attribute name="HEIGHT" value="4.6mm" x="2.7178" y="4.572" size="1.016" layer="27" display="off"/>
-<attribute name="MANUFACTURER_NAME" value="E-Switch" x="2.7178" y="4.572" size="1.016" layer="27" display="off"/>
-<attribute name="MANUFACTURER_PART_NUMBER" value="EG1270" x="2.7178" y="4.572" size="1.016" layer="27" display="off"/>
-<attribute name="MOUSER_PART_NUMBER" value="612-EG1270" x="2.7178" y="4.572" size="1.016" layer="27" display="off"/>
-<attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.co.uk/ProductDetail/E-Switch/EG1270?qs=xDsBkp9LkodMM2ilVTltow%3D%3D" x="2.7178" y="4.572" size="1.016" layer="27" display="off"/>
-<attribute name="NAME" x="-4.1614" y="10.4248" size="1.27" layer="25" align="center"/>
-<attribute name="VALUE" x="1.198" y="12.8632" size="1.27" layer="27" align="center"/>
+<element name="S1" library="SamacSys_Parts" package="EG1270" value="EG1270" x="31.75" y="3.048" smashed="yes" rot="R90">
+<attribute name="ARROW_PART_NUMBER" value="" x="31.75" y="3.048" size="1.016" layer="27" rot="R90" display="off"/>
+<attribute name="ARROW_PRICE-STOCK" value="" x="31.75" y="3.048" size="1.016" layer="27" rot="R90" display="off"/>
+<attribute name="DESCRIPTION" value="E-SWITCH - EG1270 - SWITCH, SLIDE, SPDT, 300mA, 6V, PCB" x="31.75" y="3.048" size="1.016" layer="27" rot="R90" display="off"/>
+<attribute name="HEIGHT" value="4.6mm" x="31.75" y="3.048" size="1.016" layer="27" rot="R90" display="off"/>
+<attribute name="MANUFACTURER_NAME" value="E-Switch" x="31.75" y="3.048" size="1.016" layer="27" rot="R90" display="off"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="EG1270" x="31.75" y="3.048" size="1.016" layer="27" rot="R90" display="off"/>
+<attribute name="MOUSER_PART_NUMBER" value="612-EG1270" x="31.75" y="3.048" size="1.016" layer="27" rot="R90" display="off"/>
+<attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.co.uk/ProductDetail/E-Switch/EG1270?qs=xDsBkp9LkodMM2ilVTltow%3D%3D" x="31.75" y="3.048" size="1.016" layer="27" rot="R90" display="off"/>
+<attribute name="NAME" x="25.8972" y="-3.8312" size="1.27" layer="25" rot="R90" align="center"/>
+<attribute name="VALUE" x="29.392" y="5.5734" size="1.27" layer="27" align="center"/>
 </element>
 <element name="U2" library="I2C-EEPROM" package="SOIC8" value="BR24S64FJ-WE2" x="68.834" y="19.304" smashed="yes" rot="R270">
 <attribute name="NAME" x="66.929" y="21.971" size="1.27" layer="25"/>
 <attribute name="VALUE" x="60.0964" y="14.097" size="1.27" layer="27" rot="R358.8"/>
+</element>
+<element name="Q1" library="SamacSys_Parts" package="MJE13001TP" value="S8550" x="9.906" y="18.034" smashed="yes">
+<attribute name="ARROW_PART_NUMBER" value="" x="9.906" y="18.034" size="1.778" layer="27" display="off"/>
+<attribute name="ARROW_PRICE-STOCK" value="" x="9.906" y="18.034" size="1.778" layer="27" display="off"/>
+<attribute name="DESCRIPTION" value="PNP Silicon Transistors" x="9.906" y="18.034" size="1.778" layer="27" display="off"/>
+<attribute name="HEIGHT" value="mm" x="9.906" y="18.034" size="1.778" layer="27" display="off"/>
+<attribute name="MANUFACTURER_NAME" value="MCC(Micro Commercial Components)" x="9.906" y="18.034" size="1.778" layer="27" display="off"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="S8550" x="9.906" y="18.034" size="1.778" layer="27" display="off"/>
+<attribute name="MOUSER_PART_NUMBER" value="" x="9.906" y="18.034" size="1.778" layer="27" display="off"/>
+<attribute name="MOUSER_PRICE-STOCK" value="" x="9.906" y="18.034" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="15.6972" y="20.6226" size="1.27" layer="25" align="center"/>
+<attribute name="VALUE" x="11.303" y="22.4006" size="1.27" layer="27" align="center"/>
 </element>
 </elements>
 <signals>

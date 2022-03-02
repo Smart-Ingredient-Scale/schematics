@@ -417,6 +417,29 @@
 <wire x1="-2.6" y1="6.75" x2="0.9" y2="6.75" width="0.1" layer="21"/>
 <wire x1="0.9" y1="6.75" x2="0.9" y2="6" width="0.1" layer="21"/>
 </package>
+<package name="MJE13001TP">
+<description>&lt;b&gt;TO-92_2020-1&lt;/b&gt;&lt;br&gt;
+</description>
+<pad name="1" x="0" y="0" drill="1.09" diameter="1.6"/>
+<pad name="2" x="1.27" y="1.5" drill="1.09" diameter="1.6"/>
+<pad name="3" x="2.54" y="0" drill="1.09" diameter="1.6"/>
+<text x="1.27" y="0.709" size="1.27" layer="25" align="center">&gt;NAME</text>
+<text x="1.27" y="0.709" size="1.27" layer="27" align="center">&gt;VALUE</text>
+<wire x1="-2.039" y1="3.519" x2="4.579" y2="3.519" width="0.1" layer="51"/>
+<wire x1="4.579" y1="3.519" x2="4.579" y2="-2.1" width="0.1" layer="51"/>
+<wire x1="4.579" y1="-2.1" x2="-2.039" y2="-2.1" width="0.1" layer="51"/>
+<wire x1="-2.039" y1="-2.1" x2="-2.039" y2="3.519" width="0.1" layer="51"/>
+<wire x1="-1.03" y1="0" x2="-0.93" y2="-1.1" width="0.2" layer="51"/>
+<wire x1="-0.93" y1="-1.1" x2="3.47" y2="-1.1" width="0.2" layer="51"/>
+<wire x1="3.47" y1="-1.1" x2="3.57" y2="0" width="0.2" layer="51"/>
+<wire x1="3.57" y1="0" x2="3.57" y2="0" width="0.2" layer="51"/>
+<wire x1="3.57" y1="0" x2="-1.03" y2="0" width="0.2" layer="51" curve="190.4"/>
+<wire x1="-0.93" y1="-1.1" x2="3.47" y2="-1.1" width="0.1" layer="21"/>
+<wire x1="3.47" y1="-1.1" x2="3.57" y2="0" width="0.1" layer="21"/>
+<wire x1="3.57" y1="0" x2="3.57" y2="0" width="0.1" layer="21"/>
+<wire x1="3.57" y1="0" x2="-1.03" y2="0" width="0.1" layer="21" curve="190.4"/>
+<wire x1="-1.03" y1="0" x2="-0.93" y2="-1.1" width="0.1" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="HX711">
@@ -586,6 +609,25 @@
 <pin name="NC" x="0" y="-5.08" length="middle" direction="nc"/>
 <pin name="COMM" x="0" y="-2.54" length="middle"/>
 <pin name="NO" x="0" y="0" length="middle"/>
+</symbol>
+<symbol name="S8550">
+<wire x1="7.62" y1="2.54" x2="7.62" y2="-2.54" width="0.508" layer="94"/>
+<wire x1="7.62" y1="1.27" x2="10.16" y2="3.81" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-1.27" x2="10.16" y2="-3.81" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-3.81" x2="10.16" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="10.16" y1="3.81" x2="10.16" y2="5.08" width="0.254" layer="94"/>
+<wire x1="2.54" y1="0" x2="7.62" y2="0" width="0.254" layer="94"/>
+<circle x="8.89" y="0" radius="4.016" width="0.254" layer="94"/>
+<text x="13.97" y="1.27" size="1.778" layer="95" align="center-left">&gt;NAME</text>
+<text x="13.97" y="-1.27" size="1.778" layer="96" align="center-left">&gt;VALUE</text>
+<pin name="B" x="0" y="0" visible="pad" length="short"/>
+<pin name="E" x="10.16" y="-7.62" visible="pad" length="short" rot="R90"/>
+<pin name="C" x="10.16" y="7.62" visible="pad" length="short" rot="R270"/>
+<polygon width="0.254" layer="94">
+<vertex x="9.652" y="-2.794"/>
+<vertex x="9.144" y="-3.302"/>
+<vertex x="8.636" y="-2.286"/>
+</polygon>
 </symbol>
 </symbols>
 <devicesets>
@@ -871,6 +913,34 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/1/EG1270.pdf"&g
 <attribute name="MANUFACTURER_PART_NUMBER" value="EG1270" constant="no"/>
 <attribute name="MOUSER_PART_NUMBER" value="612-EG1270" constant="no"/>
 <attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.co.uk/ProductDetail/E-Switch/EG1270?qs=xDsBkp9LkodMM2ilVTltow%3D%3D" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="S8550" prefix="Q">
+<description>&lt;b&gt;PNP Silicon Transistors&lt;/b&gt;&lt;p&gt;
+Source: &lt;a href=""&gt; Datasheet &lt;/a&gt;</description>
+<gates>
+<gate name="G$1" symbol="S8550" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="MJE13001TP">
+<connects>
+<connect gate="G$1" pin="B" pad="2"/>
+<connect gate="G$1" pin="C" pad="3"/>
+<connect gate="G$1" pin="E" pad="1"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="ARROW_PART_NUMBER" value="" constant="no"/>
+<attribute name="ARROW_PRICE-STOCK" value="" constant="no"/>
+<attribute name="DESCRIPTION" value="PNP Silicon Transistors" constant="no"/>
+<attribute name="HEIGHT" value="mm" constant="no"/>
+<attribute name="MANUFACTURER_NAME" value="MCC(Micro Commercial Components)" constant="no"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="S8550" constant="no"/>
+<attribute name="MOUSER_PART_NUMBER" value="" constant="no"/>
+<attribute name="MOUSER_PRICE-STOCK" value="" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -3763,34 +3833,6 @@ Silk outline shows header location.
 </package>
 </packages>
 <symbols>
-<symbol name="JST_2MM_MALE">
-<wire x1="-2.54" y1="-2.54" x2="-2.54" y2="1.778" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="1.778" x2="-2.54" y2="3.302" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="3.302" x2="-2.54" y2="5.08" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="5.08" x2="5.08" y2="5.08" width="0.254" layer="94"/>
-<wire x1="5.08" y1="5.08" x2="5.08" y2="3.302" width="0.254" layer="94"/>
-<wire x1="5.08" y1="3.302" x2="5.08" y2="1.778" width="0.254" layer="94"/>
-<wire x1="5.08" y1="1.778" x2="5.08" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="5.08" y1="-2.54" x2="4.064" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="4.064" y1="-2.54" x2="4.064" y2="0" width="0.254" layer="94"/>
-<wire x1="4.064" y1="0" x2="-1.524" y2="0" width="0.254" layer="94"/>
-<wire x1="-1.524" y1="0" x2="-1.524" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="-2.54" x2="-1.524" y2="-2.54" width="0.254" layer="94"/>
-<pin name="-" x="0" y="-5.08" visible="off" length="middle" rot="R90"/>
-<pin name="+" x="2.54" y="-5.08" visible="off" length="middle" rot="R90"/>
-<pin name="PAD2" x="5.08" y="2.54" visible="off" length="point" rot="R90"/>
-<pin name="PAD1" x="-2.54" y="2.54" visible="off" length="point" rot="R90"/>
-<wire x1="-2.54" y1="1.778" x2="-1.778" y2="1.778" width="0.254" layer="94"/>
-<wire x1="-1.778" y1="1.778" x2="-1.778" y2="3.302" width="0.254" layer="94"/>
-<wire x1="-1.778" y1="3.302" x2="-2.54" y2="3.302" width="0.254" layer="94"/>
-<wire x1="5.08" y1="1.778" x2="4.318" y2="1.778" width="0.254" layer="94"/>
-<wire x1="4.318" y1="1.778" x2="4.318" y2="3.302" width="0.254" layer="94"/>
-<wire x1="4.318" y1="3.302" x2="5.08" y2="3.302" width="0.254" layer="94"/>
-<wire x1="2.032" y1="1.016" x2="3.048" y2="1.016" width="0.254" layer="94"/>
-<wire x1="2.54" y1="0.508" x2="2.54" y2="1.524" width="0.254" layer="94"/>
-<wire x1="0" y1="0.508" x2="0" y2="1.524" width="0.254" layer="94"/>
-<text x="-2.54" y="5.842" size="1.778" layer="95">&gt;NAME</text>
-</symbol>
 <symbol name="CONN_02">
 <description>&lt;h3&gt;2 Pin Connection&lt;/h3&gt;</description>
 <wire x1="3.81" y1="-2.54" x2="-2.54" y2="-2.54" width="0.4064" layer="94"/>
@@ -3823,44 +3865,6 @@ Silk outline shows header location.
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="JST_2MM_MALE" prefix="LIPO" uservalue="yes">
-<description>&lt;h3&gt;JST 2MM MALE RA CONNECTOR&lt;/h3&gt;
-Two pin, compact surface mount connector. Commonly used as a battery input connection point. We really like the solid locking feeling and high current rating on these small connectors. We use these all the time as battery connectors. Mates to single-cell LiPo batteries.
-
-&lt;p&gt;&lt;/p&gt;
-&lt;b&gt;Here is the connector we sell at SparkFun:&lt;/b&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://www.sparkfun.com/products/8612"&gt;JST Right Angle Connector - White&lt;/a&gt; (PRT-08612)&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://www.sparkfun.com/datasheets/Prototyping/Connectors/JST-Horizontal.pdf"&gt;Datasheet&lt;/a&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;/p&gt;
-&lt;b&gt;It was used on these SparkFun products:&lt;/b&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://www.sparkfun.com/products/11214"&gt;SparkFun MOSFET Power Controller&lt;/a&gt; (PRT-11214)&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://www.sparkfun.com/products/13777"&gt;SparkFun Battery Babysitter - LiPo Battery Manager&lt;/a&gt; (PRT-13777)&lt;/li&gt;
-&lt;li&gt;And many, many others that required a lipo battery connection.&lt;/li&gt;
-&lt;/ul&gt;</description>
-<gates>
-<gate name="G$1" symbol="JST_2MM_MALE" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="JST-2-SMD">
-<connects>
-<connect gate="G$1" pin="+" pad="2"/>
-<connect gate="G$1" pin="-" pad="1"/>
-<connect gate="G$1" pin="PAD1" pad="NC1"/>
-<connect gate="G$1" pin="PAD2" pad="NC2"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="PROD_ID" value="CONN-11443"/>
-<attribute name="SF_ID" value="PRT-08612" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="CONN_02" prefix="J" uservalue="yes">
 <description>&lt;h3&gt;Multi connection point. Often used as Generic Header-pin footprint for 0.1 inch spaced/style header connections&lt;/h3&gt;
 
@@ -4490,11 +4494,11 @@ Two pin, compact surface mount connector. Commonly used as a battery input conne
 <part name="DCJ-0303" library="con-jack" library_urn="urn:adsk.eagle:library:154" deviceset="DCJ0303" device="" package3d_urn="urn:adsk.eagle:package:7493/1"/>
 <part name="SV1" library="con-lsta" library_urn="urn:adsk.eagle:library:161" deviceset="FE20-1" device="" package3d_urn="urn:adsk.eagle:package:8196/1"/>
 <part name="IC6" library="SamacSys_Parts" deviceset="TLV2462IP" device=""/>
-<part name="LIPO1" library="LinnesLab-Connectors" deviceset="JST_2MM_MALE" device=""/>
 <part name="J1" library="LinnesLab-Connectors" deviceset="CONN_02" device=""/>
 <part name="J2" library="LinnesLab-Connectors" deviceset="CONN_04" device=""/>
 <part name="S1" library="SamacSys_Parts" deviceset="EG1270" device=""/>
 <part name="U2" library="I2C-EEPROM" deviceset="BR24S64FJ-WE2" device=""/>
+<part name="Q1" library="SamacSys_Parts" deviceset="S8550" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -4549,9 +4553,6 @@ Two pin, compact surface mount connector. Commonly used as a battery input conne
 <attribute name="NAME" x="115.57" y="48.26" size="1.778" layer="95" align="center-left"/>
 <attribute name="VALUE" x="115.57" y="45.72" size="1.778" layer="96" align="center-left"/>
 </instance>
-<instance part="LIPO1" gate="G$1" x="226.06" y="2.54" smashed="yes">
-<attribute name="NAME" x="223.52" y="8.382" size="1.778" layer="95"/>
-</instance>
 <instance part="J1" gate="G$1" x="162.56" y="-12.7" smashed="yes">
 <attribute name="VALUE" x="160.02" y="-17.526" size="1.778" layer="96" font="vector"/>
 <attribute name="NAME" x="160.02" y="-7.112" size="1.778" layer="95" font="vector"/>
@@ -4567,6 +4568,10 @@ Two pin, compact surface mount connector. Commonly used as a battery input conne
 <instance part="U2" gate="G$1" x="76.2" y="25.4" smashed="yes">
 <attribute name="NAME" x="45.72" y="40.64" size="2.1844" layer="95"/>
 <attribute name="VALUE" x="45.72" y="20.32" size="2.1844" layer="96"/>
+</instance>
+<instance part="Q1" gate="G$1" x="114.3" y="73.66" smashed="yes" rot="R180">
+<attribute name="NAME" x="100.33" y="72.39" size="1.778" layer="95" rot="R180" align="center-left"/>
+<attribute name="VALUE" x="100.33" y="74.93" size="1.778" layer="96" rot="R180" align="center-left"/>
 </instance>
 </instances>
 <busses>
