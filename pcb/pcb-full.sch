@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -11074,9 +11074,12 @@ Source: 008-0260-0_E.pdf</description>
 <part name="R44" library="LinnesLab-Passives" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:15661944/2" value="20"/>
 <part name="R45" library="LinnesLab-Passives" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:15661944/2" value="20"/>
 <part name="R46" library="LinnesLab-Passives" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:15661944/2" value="20"/>
-<part name="J3" library="LinnesLab-Connectors" deviceset="CONN_06" device="LOCK"/>
 <part name="GND18" library="LinnesLab-Symbols" deviceset="GND" device=""/>
 <part name="SUPPLY41" library="LinnesLab-Symbols" deviceset="3.3V" device=""/>
+<part name="R47" library="LinnesLab-Passives" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:15661944/2" value="0.1"/>
+<part name="GND-ISO8" library="LinnesLab-Symbols" deviceset="GND-ISO" device=""/>
+<part name="GND-ISO9" library="LinnesLab-Symbols" deviceset="GND-ISO" device=""/>
+<part name="J3" library="LinnesLab-Connectors" deviceset="CONN_06" device="SILK_FEMALE_PTH"/>
 </parts>
 <sheets>
 <sheet>
@@ -11234,6 +11237,7 @@ Connector</text>
 <wire x1="332.74" y1="180.34" x2="256.54" y2="180.34" width="0.1524" layer="95" style="shortdash"/>
 <wire x1="256.54" y1="180.34" x2="256.54" y2="215.9" width="0.1524" layer="95" style="shortdash"/>
 <text x="264.16" y="218.44" size="1.778" layer="95">I2C BR24S64J-WE2 EEPROM</text>
+<text x="509.27" y="19.304" size="1.778" layer="95">GND connection</text>
 </plain>
 <instances>
 <instance part="IC1" gate="G$1" x="53.34" y="101.6" smashed="yes">
@@ -11988,15 +11992,25 @@ Connector</text>
 <attribute name="NAME" x="109.728" y="143.2814" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="114.046" y="143.256" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="J3" gate="G$1" x="20.32" y="78.74" smashed="yes">
-<attribute name="VALUE" x="15.24" y="68.834" size="1.778" layer="96" font="vector"/>
-<attribute name="NAME" x="15.24" y="89.408" size="1.778" layer="95" font="vector"/>
-</instance>
 <instance part="GND18" gate="G$1" x="27.94" y="68.58" smashed="yes">
 <attribute name="VALUE" x="27.94" y="68.326" size="1.778" layer="96" align="top-center"/>
 </instance>
 <instance part="SUPPLY41" gate="G$1" x="27.94" y="86.36" smashed="yes" rot="R270">
 <attribute name="VALUE" x="30.734" y="86.36" size="1.778" layer="96" rot="R270" align="bottom-center"/>
+</instance>
+<instance part="R47" gate="G$1" x="505.46" y="17.78" smashed="yes">
+<attribute name="NAME" x="501.65" y="19.2786" size="1.778" layer="95"/>
+<attribute name="VALUE" x="501.65" y="14.478" size="1.778" layer="96"/>
+</instance>
+<instance part="GND-ISO8" gate="G$1" x="495.3" y="12.7" smashed="yes">
+<attribute name="VALUE" x="495.046" y="9.144" size="1.778" layer="96" rot="R180" align="top-center"/>
+</instance>
+<instance part="GND-ISO9" gate="G$1" x="515.62" y="12.7" smashed="yes">
+<attribute name="VALUE" x="515.366" y="9.144" size="1.778" layer="96" rot="R180" align="top-center"/>
+</instance>
+<instance part="J3" gate="G$1" x="20.32" y="78.74" smashed="yes">
+<attribute name="VALUE" x="15.24" y="68.834" size="1.778" layer="96" font="vector"/>
+<attribute name="NAME" x="15.24" y="89.408" size="1.778" layer="95" font="vector"/>
 </instance>
 </instances>
 <busses>
@@ -12344,9 +12358,9 @@ Connector</text>
 </segment>
 <segment>
 <pinref part="GND18" gate="G$1" pin="GND"/>
-<pinref part="J3" gate="G$1" pin="1"/>
 <wire x1="27.94" y1="71.12" x2="27.94" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="27.94" y1="73.66" x2="25.4" y2="73.66" width="0.1524" layer="91"/>
+<pinref part="J3" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -13084,8 +13098,8 @@ Connector</text>
 </segment>
 <segment>
 <pinref part="SUPPLY41" gate="G$1" pin="3.3V"/>
-<pinref part="J3" gate="G$1" pin="6"/>
 <wire x1="27.94" y1="86.36" x2="25.4" y2="86.36" width="0.1524" layer="91"/>
+<pinref part="J3" gate="G$1" pin="6"/>
 </segment>
 </net>
 <net name="HX_SDA" class="0">
@@ -13854,6 +13868,18 @@ Connector</text>
 <pinref part="LED6" gate="G$1" pin="C"/>
 <wire x1="167.64" y1="172.72" x2="167.64" y2="175.26" width="0.1524" layer="91"/>
 <pinref part="GND-ISO7" gate="G$1" pin="GND-ISO"/>
+</segment>
+<segment>
+<pinref part="GND-ISO8" gate="G$1" pin="GND-ISO"/>
+<pinref part="R47" gate="G$1" pin="1"/>
+<wire x1="495.3" y1="15.24" x2="495.3" y2="17.78" width="0.1524" layer="91"/>
+<wire x1="495.3" y1="17.78" x2="500.38" y2="17.78" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="R47" gate="G$1" pin="2"/>
+<wire x1="510.54" y1="17.78" x2="515.62" y2="17.78" width="0.1524" layer="91"/>
+<wire x1="515.62" y1="17.78" x2="515.62" y2="15.24" width="0.1524" layer="91"/>
+<pinref part="GND-ISO9" gate="G$1" pin="GND-ISO"/>
 </segment>
 </net>
 <net name="VIN" class="0">
