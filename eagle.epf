@@ -292,5 +292,5 @@ Type="Control Panel"
 Number=0
 
 [Desktop]
-Screen="4800 1200"
+Screen="960 540"
 Window="Win_1"
